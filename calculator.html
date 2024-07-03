@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .calculator {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f7f7f7;
+        }
+        .calculator .form-control {
+            margin-bottom: 10px;
+        }
+        .calculator .btn {
+            width: 75px;
+            height: 75px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="calculator">
+        <!-- Display screen for the calculator -->
+        <input type="text" class="form-control mb-3" id="result" disabled>
+        
+        <!-- Calculator buttons -->
+        <div class="row">
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('1')">1</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('2')">2</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('3')">3</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-warning" onclick="appendOperator('/')">÷</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('4')">4</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('5')">5</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('6')">6</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-warning" onclick="appendOperator('*')">x</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('7')">7</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('8')">8</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('9')">9</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-warning" onclick="appendOperator('-')">−</button></div>
+        </div>
+        <div class="row">
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('0')">0</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="appendNumber('.')">.</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-success" onclick="calculate()">=</button></div>
+            <div class="col-3 mb-2"><button class="btn btn-warning" onclick="appendOperator('+')">+</button></div>
+        </div>
+        <div class="row">
+            <div class="col-12"><button class="btn btn-danger btn-block" onclick="clearResult()">C</button></div>
+        </div>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="calculator.js"></script>
+
+</body>
+</html>
